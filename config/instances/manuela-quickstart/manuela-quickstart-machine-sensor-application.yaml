@@ -8,18 +8,18 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/nexus-Six/edge_anomaly_detection_demo.git
+    repoURL: https://gitlab.ccloud.ninja/dgrundhfer/edge_anomaly_detection_demo.git
     targetRevision: HEAD
     path: config/instances/manuela-quickstart/machine-sensor
   destination:
     server: https://kubernetes.default.svc
     namespace: manuela-quickstart-machine-sensor
   syncPolicy:
-    automated: 
+    automated:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true
+    - CreateNamespace=true
   ignoreDifferences:
   - group: apps
     kind: Deployment
