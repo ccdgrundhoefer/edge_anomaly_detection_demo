@@ -3,4 +3,4 @@ kind: Route
 metadata:
   name: messaging
 spec:
-  host: messaging-manuela-quickstart-messaging.apps.cluster-dh87j.dh87j.sandbox2697.opentlc.com
+  host: messaging-manuela-quickstart-messaging.apps.cluster-7snqp.7snqp.sandbox1851.opentlc.com
