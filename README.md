@@ -173,7 +173,6 @@ manuela-quickstart-messaging        Synced        Healthy
 
 - Install the OpenShift DataScience Operator from the Operatorhub with default settings
 
-
 Add additional serving runtimes to OpenShift Datascience
 ```
 oc apply -f config/rhods/custom-serving-runtimes.yaml
