@@ -3,10 +3,6 @@ kind: Kustomization
 
 namespace: manuela-quickstart-line-dashboard
 
-resources:
-- line-dashboard-namespace.yaml
-- manuela-quickstart-line-dashboard-rolebinding.yaml
-
 patchesStrategicMerge:
 - line-dashboard-route.yaml
 - line-dashboard-deployment.yaml
