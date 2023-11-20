@@ -6,6 +6,8 @@ resources:
 - manuela-quickstart-line-dashboard-application.yaml
 - manuela-quickstart-machine-sensor-application.yaml
 - manuela-quickstart-messaging-application.yaml
+- rhods.yaml
+- minio.yaml
 
 patches:
 - target:
