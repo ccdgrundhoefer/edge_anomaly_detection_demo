@@ -1,5 +1,5 @@
 {
-    "websocketHost": "http://messaging-manuela-quickstart-messaging.apps.ccloud-ocp-prod.ccloud.ninja",
+    "websocketHost": "http://messaging-manuela-quickstart-messaging.apps.cluster-546zj.546zj.sandbox1969.opentlc.com",
     "websocketPath": "/api/service-web/socket",
     "SERVER_TIMEOUT": 20000
 }

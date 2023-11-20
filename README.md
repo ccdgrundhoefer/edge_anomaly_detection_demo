@@ -2,7 +2,7 @@
 
 ## Prepare your own instance of the gitops repository
 
-Fork [hhttps://github.com/nexus-Six/edge_anomaly_detection_demo.git](hhttps://github.com/nexus-Six/edge_anomaly_detection_demo.git) into your own Git repo (you will need to make changes in this repo).
+Fork [https://github.com/nexus-Six/edge_anomaly_detection_demo.git](hhttps://github.com/nexus-Six/edge_anomaly_detection_demo.git) into your own Git repo (you will need to make changes in this repo).
 
 Clone the forked repo to your local home directory
 
