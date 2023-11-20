@@ -1,10 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: manuela-quickstart-messaging
 patchesStrategicMerge:
 - route.yaml
 - messaging-deployment.yaml
+
+resources:
+- amq-operator-subscription.yaml
 
 bases:
 #- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/messaging
