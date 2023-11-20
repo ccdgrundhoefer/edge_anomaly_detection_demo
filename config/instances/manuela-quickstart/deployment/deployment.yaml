@@ -8,7 +8,7 @@ spec:
   project: default
   source:
     repoURL: https://gitlab.ccloud.ninja/dgrundhfer/edge_anomaly_detection_demo.git
-    targetRevision: feature/experience-demo
+    targetRevision: main
     path: config/instances/manuela-quickstart/applications
   destination:
     server: https://kubernetes.default.svc

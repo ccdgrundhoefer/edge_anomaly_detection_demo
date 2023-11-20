@@ -17,7 +17,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: https://gitlab.ccloud.ninja/dgrundhfer/edge_anomaly_detection_demo.git
+      value: https://github.com/nexus-Six/edge_anomaly_detection_demo.git
 - target:
     group: argoproj.io
     version: v1alpha1
@@ -25,4 +25,4 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/targetRevision
-      value: feature/experience-demo
+      value: main
