@@ -16,7 +16,7 @@ patches:
     kind: Application
   patch: |-
     - op: add
-      path: /spec/source/repoUrl
+      path: /spec/source/repoURL
       value: https://gitlab.ccloud.ninja/dgrundhfer/edge_anomaly_detection_demo.git
 - target:
     group: argoproj.io
