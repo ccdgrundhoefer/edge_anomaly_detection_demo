@@ -2,7 +2,7 @@
 
 ## Prepare your own instance of the gitops repository
 
-Fork [https://github.com/nexus-Six/edge_anomaly_detection_demo.git](hhttps://github.com/nexus-Six/edge_anomaly_detection_demo.git) into your own Git repo (you will need to make changes in this repo).
+Fork [https://github.com/nexus-Six/edge_anomaly_detection_demo.git](https://github.com/nexus-Six/edge_anomaly_detection_demo.git) into your own Git repo (you will need to make changes in this repo).
 
 Clone the forked repo to your local home directory
 
@@ -18,6 +18,8 @@ Replace the git repo paths in
 - config/instances/manuela-quickstart/manuela-quickstart-line-dashboard-application.yaml
 - config/instances/manuela-quickstart/manuela-quickstart-messaging-application.yaml
 - config/instances/manuela-quickstart/manuela-quickstart-machine-sensor-application.yaml
+
+Alternatively change the repoURL in `config/instances/manuela-quickstart/applications/kustomization.yaml`, see [Quickstart](#quickstart)
 
 Replace the OCP paths in
 
@@ -83,6 +85,41 @@ We will deploy the three part of the core Manuele Applicatoion step by step:
 1. Messaging component inclusive the AMQ Broker Operator and instance
 2. Line Dashboard
 3. Senor Simulators
+
+### Quickstart
+
+To deploy all applications including __minio__ and __OpenShift Data Science__ as an app of apps deployment:
+
+If nescessary: Modify the kustomize patches to include your repoURL and git branch:
+`config/instances/manuela-quickstart/applications/kustomization.yaml`
+
+```yaml
+patches:
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+  patch: |-
+    - op: add
+      path: /spec/source/repoURL
+      value: https://github.com/nexus-Six/edge_anomaly_detection_demo.git
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+  patch: |-
+    - op: add
+      path: /spec/source/targetRevision
+      value: main
+```
+
+__If you are not using openshift-gitops modify the target namespace in `config/instances/deployment/deployment.yaml` to your argocd namespace__
+
+```bash
+oc apply -f config/instances/deployment/deployment.yaml
+```
+
+Wait till all applications are available and jump to [Deploy the anomaly detection ml service](#deploy-the-anomaly-detection-ml-service)
 
 ### Install the messaging component inclusive the AMQ Broker Operator and instance
 
