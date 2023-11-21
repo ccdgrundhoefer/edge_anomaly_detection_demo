@@ -292,7 +292,7 @@ Add a non https Route for your app
   - Target port : 8008
   - Create
 
-Test the new Route as well, adding `v2/models/ml-edge-demo/infer` to the Route
+Test the new Route as well, adding `v2/models/ml-edge-demo-model/infer` to the Route
 
 Add the new endpoint to the Edge-Consumer via GitOPS
 
